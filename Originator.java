@@ -15,6 +15,7 @@ public class Originator{
     caretaker.add(new Memento(state));
   }
 
-  public Momento getStateFromCareTaker(int x){
+  public Memento getStateFromCareTaker(int x){
     return caretaker.get(x);
   }
+}
