@@ -1,26 +1,32 @@
 public class Originator{
 
-  private String state;
+  private State state;
   private Caretaker caretaker;
+  private String msg;
 
   public Originator(){
    this.state = state;
    this.caretaker = new Caretaker();
   }
 
-  public void setState(String state){
+  public void setState(State state,String msg){
     this.state = state;
+    this.msg = msg;
   }
 
-  public String getState(){
+  public State getState(){
     return this.state;
   }
 
+//broken
   public void save(){
-    caretaker.add(new Memento(this.state));
+    Message message;
+    if(State.DEBUG == this.message)
+      message = new DebugMessage(message);
+    caretaker.add(message);
   }
 
-  public Memento getStateFromCareTaker(int x){
+  public Message getStateFromCareTaker(int x){
     return caretaker.get(x);
   }
 }

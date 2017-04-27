@@ -3,17 +3,17 @@ import java.util.*;
 public class Caretaker{
 
 
-  private ArrayList<Memento> events;
+  private ArrayList<Message> events;
 
   protected Caretaker(){
     this.events =  new ArrayList<>();
   }
 
-  protected void add(Memento memento){
-    events.add(memento);
+  protected void add(Message state){
+    events.add(state);
   }
 
-  protected Memento get(int x){
+  protected Message get(int x){
     return events.get(x);
   }
 }

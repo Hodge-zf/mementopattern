@@ -3,15 +3,8 @@ public class SomeClass{
 
    Originator originator = new Originator();
 
-   originator.setState("State");
+   originator.setState(State.DEBUG,"DebugMessage");
    originator.save();
    System.out.println(originator.getState());
-   originator.setState("State1");
-   originator.save();
-   System.out.println(originator.getStateFromCareTaker(1));
-   originator.setState("State2");
-   originator.save();
-   System.out.println(originator.getStateFromCareTaker(2));
-
   }
 }
