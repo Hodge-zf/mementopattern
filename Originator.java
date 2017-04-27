@@ -4,7 +4,7 @@ public class Originator{
   private Caretaker caretaker;
 
   public Originator(){
-   this.state = "Initial";
+   this.state = state;
    this.caretaker = new Caretaker();
   }
 
@@ -17,7 +17,7 @@ public class Originator{
   }
 
   public void save(){
-    caretaker.add(new Memento(state));
+    caretaker.add(new Memento(this.state));
   }
 
   public Memento getStateFromCareTaker(int x){
